@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>L system</title>
+	</head>
+<body style="background-color:#57209F">
+<table align="center" border="0" cellspacing="10" cellpadding="10" style="background-color:#F3D2FF" >
+    <tr>
+        <td>
+            <canvas height="700" width="700" id="canvas" style="background-color:#F8F0FF"></canvas>
+        </td>
+        <td>
+		<table>
+            <tr><td>Аксиома</td><td> 
+				<select size="1" id="axiom">
+					<option value="0">F</option>
+					<option value="1">[F]+[F]+[F]+[F]+[F]+[F]</option>
+				</select>
+			</td></tr>
+            <tr><td>Правило F = </td><td>
+				<select size="1" id="rule">
+					<option value="0">-F+F+[+F-F-]-[-F+F+F]</option>
+					<option value="1">F[+FF][-FF]FF[+F][-F]FF</option>
+				</select>
+			</br></td>
+            <tr><td>Угол </td><td>
+				<select size="1" id="angle">
+					<option value="0">22</option>
+					<option value="1">60</option>
+				</select>
+			</br></td>
+            <tr><td align="right">x0=</br>y0=</br>angle0=</td><td>
+			<select size="1" id="x0">
+					<option value="0">200</option>
+					<option value="1">350</option>
+			</select></br>
+            <select size="1" id="y0">
+					<option value="0">600</option>
+					<option value="1">350</option>
+			</select></br>
+            <input type="number" cols="1" rows="1" id="angle0" name = "angle0" value="90"/></br></td>
+            <tr><td>Длина шага </td><td><input type="number" cols="1" rows="1" id="step" name = "step" value="15"/></br></td>
+            <tr><td>Итерации </td><td><input type="number" cols="1" rows="1" id="iter" name = "iter"/> </br></td>
+			<tr><td colspan="2" align="center"></br></br>
+            <input type="button" onclick="run()" value="Рисовать"></br></td>
+		</table>
+        </td>
+    </tr>
+</table>
+<script src="Lsistem.js"></script>
+</body>
+</html>
